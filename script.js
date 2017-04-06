@@ -1,6 +1,10 @@
-var jsload = Date.now();
+    var quotes = [
+            "Text 1",
+            "Text 2",
+            "Text 3"
+    ];
 
-
-$(function() {
-    $.post('/result' + location.pathname.replace('.html','') + '/' + (jsload - start) + '/' + (bodyexec - start));
-});
+    function newQuote() {
+    var randomNumber = Math.floor(Math.random() * (quotes.length));
+    document.getElementById("quoteArea").innerHTML = quotes[randomNumber];
+}
